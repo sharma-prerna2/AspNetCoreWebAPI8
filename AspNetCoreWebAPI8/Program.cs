@@ -1,12 +1,8 @@
-using AspNetCoreWebAPI8.Models;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDbContext<MovieContext>(options =>
-                    options.UseSqlServer(builder.Configuration.GetConnectionString("MovieContext")));
 
 builder.Services.AddControllers();
 
